@@ -11,7 +11,7 @@ const App = () => {
    const [selectedVideo, setSelectedVideo] = useState(null);
 
    // Use our custom hook like a primitive hook
-   const [videos, search] = useVideos('Allie Sherlock Billie Jean');
+   const [videos, search] = useVideos('Kurzgesagt');
 
    // My addition to this app, allows for comp resizing when width is above a breakpoint
    const [windowWidth, setWindowWidth] = useState(
