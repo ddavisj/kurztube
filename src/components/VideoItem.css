@@ -1,0 +1,16 @@
+/* So Stephen added video-item as a class to the comp to be styled by this css, 
+ie. the base div in VideoItem */
+
+.video-item {
+   display: flex !important;
+   align-items: center !important;
+   cursor: pointer;
+}
+
+.video-item.item img {
+   max-width: 150px;
+}
+
+.active {
+   background-color: antiquewhite;
+}
