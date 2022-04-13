@@ -1,8 +1,6 @@
 # Introduction
 
-This app was slightly adapted from a video streaming app built within a React/Redux course. Essentially, the app connects to the YouTube API and lets users search for and display a list of videos, select one of the results and play it in the browser. The key adaptation made was purely for layout - mobile and widescreen modes were created. This was done by creating a function that checks for screen width and displays a mobile or widescreen class name that sets the styling for either class of device.
-
-This app is hosted on Netlify.
+This is a video search app built within a React/Redux course and has been slightly modified. The app connects to the YouTube API and lets users search for and display a list of videos, select one of the results and play it in the browser. The key adaptation made was for layout; mobile and widescreen modes were created. This was done by creating a function that checks for screen width and displays a mobile or widescreen class name that sets the styling for either class of device.
 
 # Main Technologies
 
@@ -29,3 +27,7 @@ In this case, the custom hook extracts video fetching logic from a components an
 -  hooks: contains the custom hook
 
 -  apis: Axios clients, ie. functions that form the basis for requests made in this case to our YouTube api
+
+# Hosting
+
+This app is hosted on Netlify.
