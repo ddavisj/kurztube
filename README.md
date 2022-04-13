@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app was slightly adapted from a video streaming app built within a React/Redux course. Essentially, the app connects to the YouTube API and lets users search for and display a list of videos, select one of the results and play it in the browser. The key adaptation made was purely for layout - mobile and widescreen modes were created. This was done by creating a function that checks for screen width and displays a mobile or widescreen class name that sets the styling for either class of device.
 
-## Available Scripts
+This app is hosted on Netlify.
 
-In the project directory, you can run:
+# Main Technologies
 
-### `npm start`
+## React
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React was used to create components within the app. These components are written in JSX, a markup language, and this is then converted to html in the browser via Babel.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Custom Hook
 
-### `npm test`
+This app features a custom hook. Hooks are techniques used by React that allow functional components to emulate the functionality of class-based components (CBCs). Hooks are a condensed way to mimic functionality that is more verbosely scripted in CBCs. By combining different hooks, in this case useEffect and useState, we can create a custom hook that lets us separate out logic related to functions that would otherwise be duplicated in multiple places in a code-base. This simplifies maintenance of this code, and makes it reusable by multiple components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In this case, the custom hook extracts video fetching logic from a components and makes it easily available to others.
 
-### `npm run build`
+# Additional Node Modules and Add-ons
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-  Axios: Lets us make asynchronous requests (ie. requests that take a finite amount of time) to our API server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Main Folders
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Folders within src
 
-### `npm run eject`
+-  components: all React components
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-  hooks: contains the custom hook
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-  apis: Axios clients, ie. functions that form the basis for requests made in this case to our YouTube api
